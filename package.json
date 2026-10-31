@@ -1,0 +1,59 @@
+{
+  "name": "nrs-mbs-kit",
+  "version": "0.1.0",
+  "description": "Developer kit for Nigeria's NRS e-invoicing (Merchant Buyer Solution): invoice builder, offline validator with plain-English errors, IRN and QR helpers, sandbox client.",
+  "license": "MIT",
+  "type": "module",
+  "main": "./dist/index.js",
+  "types": "./dist/index.d.ts",
+  "exports": {
+    ".": {
+      "types": "./dist/index.d.ts",
+      "import": "./dist/index.js"
+    }
+  },
+  "bin": {
+    "nrs-mbs": "./dist/cli.js"
+  },
+  "files": [
+    "dist",
+    "data",
+    "README.md",
+    "LICENSE"
+  ],
+  "scripts": {
+    "build": "tsc -p tsconfig.json",
+    "test": "node --test \"test/**/*.test.ts\"",
+    "prepublishOnly": "npm run build && npm test"
+  },
+  "engines": {
+    "node": ">=22.6"
+  },
+  "devDependencies": {
+    "@types/node": "^24.0.0",
+    "typescript": "^5.7.0"
+  },
+  "peerDependencies": {
+    "qrcode": "^1.5.0"
+  },
+  "peerDependenciesMeta": {
+    "qrcode": {
+      "optional": true
+    }
+  },
+  "keywords": [
+    "nigeria",
+    "nrs",
+    "firs",
+    "e-invoicing",
+    "mbs",
+    "merchant-buyer-solution",
+    "irn",
+    "ubl",
+    "vat"
+  ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/Eyihbanner1/nrs-mbs-kit.git"
+  }
+}

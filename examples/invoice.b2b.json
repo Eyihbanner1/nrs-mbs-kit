@@ -1,0 +1,92 @@
+{
+  "business_id": "00000000-0000-4000-8000-000000000000",
+  "irn": "INV2026001-94ND90NR-20261031",
+  "issue_date": "2026-10-31",
+  "issue_time": "10:00:00",
+  "invoice_type_code": "381",
+  "invoice_kind": "B2B",
+  "payment_status": "PENDING",
+  "document_currency_code": "NGN",
+  "tax_currency_code": "NGN",
+  "accounting_supplier_party": {
+    "party_name": "Example Supplies Ltd",
+    "tin": "12345678-0001",
+    "email": "accounts@example-supplies.ng",
+    "telephone": "+2348012345678",
+    "business_description": "Office equipment and IT services",
+    "postal_address": {
+      "street_name": "17 Harper Crescent, Wuse",
+      "city_name": "Abuja",
+      "postal_zone": "900288",
+      "lga": "NG-FC-AML",
+      "state": "NG-FC",
+      "country": "NG"
+    }
+  },
+  "accounting_customer_party": {
+    "party_name": "Example Buyer Ltd",
+    "tin": "87654321-0001",
+    "email": "ap@example-buyer.ng",
+    "telephone": "+2348098765432",
+    "business_description": "Manufacturing",
+    "postal_address": {
+      "street_name": "10 Industrial Avenue",
+      "city_name": "Isheri",
+      "postal_zone": "110001",
+      "lga": "NG-OG-IFO",
+      "state": "NG-OG",
+      "country": "NG"
+    }
+  },
+  "tax_total": [
+    {
+      "tax_amount": 78750,
+      "tax_subtotal": [
+        {
+          "taxable_amount": 1050000,
+          "tax_amount": 78750,
+          "tax_category": {
+            "id": "STANDARD_VAT",
+            "percent": 7.5
+          }
+        }
+      ]
+    }
+  ],
+  "legal_monetary_total": {
+    "line_extension_amount": 1050000,
+    "tax_exclusive_amount": 1050000,
+    "tax_inclusive_amount": 1128750,
+    "payable_amount": 1128750
+  },
+  "invoice_line": [
+    {
+      "invoiced_quantity": 2,
+      "line_extension_amount": 900000,
+      "item": {
+        "name": "Desktop computer"
+      },
+      "price": {
+        "price_amount": 450000,
+        "base_quantity": 1,
+        "price_unit": "EA"
+      },
+      "hsn_code": "8471.50",
+      "product_category": "Automatic data processing units"
+    },
+    {
+      "invoiced_quantity": 1,
+      "line_extension_amount": 150000,
+      "item": {
+        "name": "Setup and configuration"
+      },
+      "price": {
+        "price_amount": 150000,
+        "base_quantity": 1,
+        "price_unit": "EA"
+      },
+      "isic_code": "6201",
+      "service_category": "Computer programming activities"
+    }
+  ]
+}

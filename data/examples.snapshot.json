@@ -1,0 +1,52 @@
+{
+  "note": "EXAMPLE SUBSET ONLY. These are the codes that appear in public documentation from NRS, NIBSS, Pronalytics and Yona. The real lists have hundreds of HS codes, 774 LGAs and more. Fetch a real snapshot with `nrs-mbs resources fetch` using your own API key before validating real invoices. Invoice type and tax category names differ between published documents; a live snapshot from the gateway wins.",
+  "invoice_types": [
+    { "code": "381", "value": "Commercial Invoice" },
+    { "code": "380", "value": "Credit Note" },
+    { "code": "384", "value": "Debit Note" },
+    { "code": "386", "value": "Factored Invoice" }
+  ],
+  "tax_categories": [
+    { "code": "STANDARD_VAT", "value": "Standard VAT", "percent": 7.5 },
+    { "code": "REDUCED_VAT", "value": "Reduced VAT", "percent": 7.5 },
+    { "code": "ZERO_VAT", "value": "Zero-rated VAT", "percent": 0 },
+    { "code": "EXEMPTED", "value": "Exempt from VAT", "percent": 0 }
+  ],
+  "currencies": [
+    { "code": "NGN", "name": "Nigerian Naira", "decimal_digits": 2 },
+    { "code": "USD", "name": "US Dollar", "decimal_digits": 2 }
+  ],
+  "payment_means": [
+    { "code": "10", "value": "Cash" },
+    { "code": "20", "value": "Check" },
+    { "code": "30", "value": "Credit Transfer" },
+    { "code": "91", "value": "Not Otherwise Specified" }
+  ],
+  "states": [
+    { "code": "NG-AB", "name": "Abia" },
+    { "code": "NG-AD", "name": "Adamawa" },
+    { "code": "NG-AK", "name": "Akwa Ibom" },
+    { "code": "NG-FC", "name": "Federal Capital Territory" },
+    { "code": "NG-LA", "name": "Lagos" },
+    { "code": "NG-OG", "name": "Ogun" }
+  ],
+  "lgas": [
+    { "code": "NG-AB-ANO", "name": "Aba North", "state_code": "NG-AB" },
+    { "code": "NG-AB-ASO", "name": "Aba South", "state_code": "NG-AB" },
+    { "code": "NG-AB-ARO", "name": "Arochukwu", "state_code": "NG-AB" },
+    { "code": "NG-FC-AML", "name": "Abuja Municipal", "state_code": "NG-FC" },
+    { "code": "NG-OG-IFO", "name": "Ifo", "state_code": "NG-OG" }
+  ],
+  "hs_codes": [
+    { "hscode": "0101.21", "description": "Horses; live, pure-bred breeding animals" },
+    { "hscode": "1006.30", "description": "Cereals; rice, semi-milled or wholly milled" },
+    { "hscode": "8443.32", "description": "Printing, copying or facsimile machines, network-capable" },
+    { "hscode": "8471.50", "description": "Processing units of automatic data processing machines" }
+  ],
+  "service_codes": [
+    { "code": "0111", "description": "Growing of cereals (except rice), leguminous crops and oil seeds" },
+    { "code": "0112", "description": "Growing of rice" },
+    { "code": "6201", "description": "Computer programming activities" },
+    { "code": "6311", "description": "Data processing, hosting and related activities" }
+  ]
+}
