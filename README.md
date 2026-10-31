@@ -41,6 +41,8 @@ npm install qrcode
 
 ## Quick start
 
+The addresses and codes below are all in the bundled example snapshot, so this runs clean as written. Real invoices use the codes from your own fetched snapshot.
+
 ```ts
 import { buildInvoice, validate, formatResult, loadExampleSnapshot } from 'nrs-mbs-kit';
 
@@ -55,7 +57,7 @@ const invoice = buildInvoice({
     party_name: 'Example Supplies Ltd',
     tin: '12345678-0001',
     telephone: '+2348012345678',
-    postal_address: { street_name: '1 Marina', city_name: 'Lagos', lga: 'NG-LA-LIS', state: 'NG-LA', country: 'NG' },
+    postal_address: { street_name: '17 Harper Crescent, Wuse', city_name: 'Abuja', lga: 'NG-FC-AML', state: 'NG-FC', country: 'NG' },
   },
   customer: {
     party_name: 'Example Buyer Ltd',
@@ -69,7 +71,7 @@ const invoice = buildInvoice({
 });
 
 const result = validate(invoice, { resources: loadExampleSnapshot() });
-console.log(formatResult(result));
+console.log(formatResult(result));   // OK: no problems found.
 ```
 
 A failing invoice prints something like:
@@ -105,7 +107,7 @@ const outcome = await client.clear(invoice);   // validate IRN -> validate -> si
 console.log(outcome.confirm.body);
 ```
 
-Documented base URLs: sandbox `https://eivc-k6z6d.ondigitalocean.app`, production `https://einvoice1.firs.gov.ng`. Authentication is two headers, `x-api-key` and `x-api-secret`.
+Documented base URLs: sandbox `https://eivc-k6z6d.ondigitalocean.app`, production `https://einvoice1.firs.gov.ng`. Authentication is two headers, `x-api-key` and `x-api-secret`. Both URLs are copied from one provider's published reference and have not been exercised by this kit; the same document also names `api.firsmbs.com` as a reporting host. If the sandbox hostname turns out to be that provider's own proxy, pass the real NRS URL as `baseUrl` and open an issue so the default can be corrected.
 
 ## Two things the documents disagree on
 
